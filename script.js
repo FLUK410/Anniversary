@@ -19,23 +19,3 @@ function updateAnniversary() {
 
 setInterval(updateAnniversary, 1000);
 updateAnniversary();
-
-// แกลเลอรี่
-document.addEventListener("DOMContentLoaded", () => {
-  const upload = document.getElementById("upload");
-  if (upload) {
-    upload.addEventListener("change", (e) => {
-      const files = e.target.files;
-      const gallery = document.getElementById("gallery");
-      for (let file of files) {
-        const reader = new FileReader();
-        reader.onload = (ev) => {
-          const img = document.createElement("img");
-          img.src = ev.target.result;
-          gallery.appendChild(img);
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  }
-});
