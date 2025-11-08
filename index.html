@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>💖 Our Anniversary 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>💞 Our Special Moments 💞</h1>
+    <p>เว็บเล็กๆ สำหรับคนสำคัญที่สุดของเรา</p>
+
+    <div class="menu-grid">
+      <a href="#" class="menu-card" onclick="showSection('anniversary')">วันครบรอบ ⏳</a>
+      <a href="#" class="menu-card" onclick="showSection('gallery')">ความทรงจำของเรา 🖼️</a>
+      <a href="#" class="menu-card" onclick="showSection('message')">ข้อความถึงกัน 💌</a>
+      <a href="#" class="menu-card" onclick="showSection('gift')">ของขวัญพิเศษ 🎁</a>
+    </div>
+  </div>
+
+  <!-- Section: วันครบรอบ -->
+  <div id="anniversary" class="section hidden">
+    <h2>⏳ วันครบรอบของเรา</h2>
+    <p id="timer"></p>
+    <button class="back-btn" onclick="backToMenu()">กลับหน้าแรก</button>
+  </div>
+
+<!-- Section: แกลเลอรี่ -->
+<div id="gallery" class="section hidden">
+  <h2>🖼️ ความทรงจำของเรา</h2>
+
+  <div id="gallery-display" class="gallery">
+    <!-- ใส่รูปตรงนี้เลย -->
+    <img src="img/cat-0.jpg" alt="ความทรงจำ 1">
+    <img src="img/cat-1.jpg" alt="ความทรงจำ 2">
+    <img src="img/cat-2.jpg" alt="ความทรงจำ 3">
+    <!-- สามารถเพิ่มรูปได้ตามต้องการ -->
+  </div>
+
+  <button class="back-btn" onclick="backToMenu()">กลับหน้าแรก</button>
+</div>
+
+  <!-- Section: ข้อความ -->
+  <div id="message" class="section hidden">
+    <h2>💌 ข้อความถึงเธอ</h2>
+    <p class="love-note">
+      ถึงคนพิเศษของเรา...  
+      ขอบคุณที่อยู่ด้วยกันมาตลอด ไม่ว่าจะวันดีหรือวันที่เหนื่อย  
+      แค่มีเธออยู่ข้างๆ ทุกวันก็มีความหมายขึ้นเยอะเลย 💕  
+    </p>
+    <button class="back-btn" onclick="backToMenu()">กลับหน้าแรก</button>
+  </div>
+
+  <!-- Section: ของขวัญ -->
+  <div id="gift" class="section hidden">
+    <h2>🎁 ของขวัญพิเศษสำหรับเธอ</h2>
+    <p>ลองกดปุ่มนี้ดูสิ 💖</p>
+    <button class="heart-btn" onclick="showHearts()">💗 คลิกที่นี่ 💗</button>
+    <div id="heart-container"></div>
+    <button class="back-btn" onclick="backToMenu()">กลับหน้าแรก</button>
+  </div>
+</body>
+</html>
